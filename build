@@ -1,0 +1,1 @@
+pandoc chapters/title.md chapters/introduction.md chapters/lit-review.md chapters/methodology.md chapters/design.md chapters/evaluation.md chapters/discussion.md chapters/management.md chapters/conclusion.md chapters/bibliography.md chapters/appendices.md --number-sections -s -o dissertation.pdf
