@@ -1,6 +1,6 @@
 \pagebreak
 
-#Literature Review
+# Literature Review
 
 ## Introduction
 As of 2018, there were 3.7 billion mobile devices connecting to the internet (Stevens, 2018) showing that a huge proportion of people use their mobile devices, and there’s nothing to suggest that the growth in mobile usage will do anything other than increase.

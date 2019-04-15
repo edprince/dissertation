@@ -15,7 +15,7 @@ increasing battery life, a feature useful anywhere in the world.
 The methodology chapter presents the formation and execution of the experiments, and details 
 on how results could be replicated. The experiments are split up into component sections, 
 each identifying a different area for potential optimisation. Each section has a brief summary, 
-a prediction of the expected results upon modification and re-profiling, and the actual results, 
+a prediction of the expected results upo modification and re-profiling, and the actual results, 
 how the compare, and why they might differ to the predictions. The chapter is concluded with a 
 summary of all of the results, and how they relate to optimisations for low-powered smartphones.
 
