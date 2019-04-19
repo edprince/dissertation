@@ -10,8 +10,75 @@ In order to perform in-depth analysis on the largest areas for optimisation, a w
 
 ## Testbed Application
 
-
 The testbed application is a realtime chatting application - an application with a genuine use anywhere in the world. The front-end is built with React, making use of the popular Create React App library, and Socket.io to communicate with a Node.js server also running Socket.io. On top of this, the app makes use of several other libraries, such as Bootstrap, Moment, JQuery and Faker, giving a partially realistic build to the application.
+
+## Bundlers 
+
+To understand why bundlers are used - it is important to understand the history of JavaScript, and its current state. JavaScript is a programming language, created in 1995 - and
+has been standardised with ECMA (European Computer Manufacturer's Association). Whilst the 9th edition of ECMAScript (ES2018) was finalised in June 2018, only modern browsers can
+read ES2015 and above, meaning that if developers want their applications to be comprehensively compatible with browsers, the application must be written in ES2015. This raises
+the issue that the newer versions of ECMAScript have introduced many features of the language that offer superior development - meaning developers want to write their code in ES2015+.
+This is where a compiler like Babel comes in. Babel can take ES2015+ code, and convert it into ES5 code.
+
+To adhere to good programming conventions, developers tend to build applications out of many modules, but this raises more issues. To import a JavaScript file in HTML, you use a tag
+like so:
+
+```HTML
+<script src="/path/to/file.js"></script>
+<script src="/path/to/file2.js"></script>
+etc.
+```
+If the applications is made up of 200 different files, the browser has to separately send a request for each file, taking a long time to fetch the resources before the user can interact
+with the full application. This is where bundlers are used. The bundler can take all these files, and bundle them into one JavaScript file - which the browser then requests:
+
+```HTML
+<script src="/path/to/bundle.js"></script>
+```
+Now there is only one file request from the browser, and one file to parse, albeit much larger. Bundlers can do much more than just this however - they can also
+use plugins like Babel to convert ES2015 to ES5, making the application fully browser compatible, along with minification, setting up development servers and more.
+This leaves us being able to write modular code, in ES2015+, and still run the optimised app on older browsers. For the purpose of this project, two of the major
+bundlers were chosen to analyse: Webpack and Rollup.
+
+### Webpack
+Webpack is the bundler used by the tool 'create-react-app', popular amongst developers for quickly getting React Apps
+set up. 
+Webpack turns each module into its own isolated function scope.
+
+
+### Rollup
+
+Rollup puts everything into the same function scope.
+When measuring the performance of Rollup - it is anticipated that the execution time should
+decrease, as its handles modules in a different style to Webpack (Lawson, 2016).
+
+~~~js
+function foo(a, b) {
+    function bar() {
+        return a + b;
+    }
+
+    return bar();
+}
+
+let result = foo(1, 2);
+~~~
+
+When the JavaScript engine reaches this section of code, it creates a new function object
+in memory for `foo()`. When the engine reaches the line where `foo()` is called, it executes
+the function, which creates a new function: `bar()`. When the function execution finishes, the
+`bar()` object in memory is destroyed. This means if `foo()` is called 100 times, the `bar()`
+function is created and destroyed 100 times. This costs processing, making it generally
+slower than non-nested functions.
+
+## Frameworks
+
+### React
+
+### Preact
+
+### Inferno
+
+### Hyperapp
 
 ## Performance Profiling
 
