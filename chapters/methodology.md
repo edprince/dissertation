@@ -17,14 +17,31 @@ The testbed application is a realtime chatting application - an application with
 
 To collect accurate metrics about the performance of the chat web app, the Google Chrome Development Tools were used. These tools allow for performance profiling, detailed audits for progressive web apps, and information about load times and page weight. Additionally, they have the capability for CPU throttling, which allows visualising the scale of performance difference between unthrottled and throttled CPU with the same application.
 
+## Bundling
+Bundling is a modern standard of web development for several reasons.
+It means developers can seperate files into smaller, more manageable
+components, making further development easier than all the code being
+in one file - the principle being similar to the separation of concerns.
+If the programmer were to split up their code without using a bundler,
+they would have to tell the browser to fetch each JavaScript file using
+`<script>` tags. This would cause the browser to fetch each file, one
+by one - not very efficient. Bundling allows the developers to work
+on separate files, keeping their separation of concerns, but upon building
+the project, the files are all compiled into a single, bundled JavaScipt file.
+This file is then called by the HTML file - meaning only one script is
+being fetched using `<script>` tags. It also allows programmers to make
+use of ES6 standards, but the compiler can use Babel to compile the code
+into valid ES5 code - making the code compatible across all major browsers.
+
 
 
 Initially, the unbundled version of the application was analysed, with an unthrottled CPU. This gives the initial set of metrics that can be calculated against. These are: 
 
+
 | Metric | Description |
 |---|---|
 | Load time | Total load time for page resources to be rendered |
-| TTI | Time to interactive (e.g When the user can begin interacting with the page) |
+| TTI | Time to interactive (e.g When the user can interact with page) |
 | Page Weight | Accumulated total file size |
 | Loading | Parsing, sending/receiving requests |
 | Scripting | Compiling and evaluating scripts |
@@ -49,7 +66,11 @@ Across the results, this gives the full range of percentage increases between th
 
 To gain the data, Puppeteer was used to run a headless browser, navigate to the URL where the app was being hosted. At this point, the client emulation configuration was decided upon and sent to the headless browser. It could then apply the correct emulation, and begin a timeline trace. Once finished, the trace data would be written to a JSON file, and saved with a name of the current timestamp (to avoid any duplicate file names). The script would run the tracing 20 times each for non-throttled, 4 times throttling, and six times throttling. This reduced outliers, and an average for each metric was collected, before compiling into charts. 
 
-
+Webpack supports all ES5-compliant browsers - and if developers wish to support browsers older than this - polyfills can be loaded
+to make the application compatible. When using Create React App, webpack's configuration
+is kept hidden. This default is what will be used in this project to measure
+performance. This is because the programmer must actively "eject" their application
+to access customisation of webpack configuration. 
 
 Why I chose case 1, 2 etc. (justify with example - expected result)
 Make a comparison table between predicted/actual results with discussion of relevance
