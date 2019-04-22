@@ -1,0 +1,21 @@
+{
+  "name": "dissertation",
+  "version": "1.0.0",
+  "description": "How can web developers optimise for lower power smartphones in the developing world",
+  "main": "index.js",
+  "scripts": {
+    "start": "./watch",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "./watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/edprince/dissertation.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/edprince/dissertation/issues"
+  },
+  "homepage": "https://github.com/edprince/dissertation#readme"
+}

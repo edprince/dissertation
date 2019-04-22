@@ -9,6 +9,7 @@ successful, and avoid wasted time in the future. Whilst generally proceedings we
 there were definite lessons learned from this project that can and will be applied to future
 endeavours.
 
+
 ## Timeline
 
 Making use of Gantt Chart, and GitHub Projects feature to plan a schedule. Retrospecitvely,

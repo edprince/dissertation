@@ -22,6 +22,7 @@ subparagraph: yes
 ---
 
 \maketitle
+![Certificate of Ethics](./certificate.jpg)
 \thispagestyle{empty}
 \clearpage
 \begin{abstract}
@@ -34,4 +35,6 @@ subparagraph: yes
 \pagebreak
 \tableofcontents
 \pagebreak
+
+
 
