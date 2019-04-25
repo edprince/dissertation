@@ -10,7 +10,7 @@ there were definite lessons learned from this project that can and will be appli
 endeavours. To build the testbed application - the iterative life cycle methodology was employed,
 allowing the application to quickly progress in the early stages, and gradually improve throughout
 the entire process. This is due to the acceptance that with an iterative lifecycle methodolgy there
-will be a lot of rework, particularly at the early stages of the project (Krutchen 2000)
+will be a lot of rework, particularly at the early stages of the project (Krutchen 2000).
 
 With additions like the alternative frameworks, and the automated data
 collection script, making use of Puppeteer and the Devtools Web API - this method was effective,
@@ -41,7 +41,10 @@ partially relevant - the research would have shown that web apps perform better 
 processing done on a server, leaving the client with a light load, and that a server could
 send a more optimised bundle for a device. Whilst achievable as an experiment - this research
 would likely not have shed any new light on the area - therefore the JavaScript frameworks
-comparison became the new subject for case study 2.
+comparison became the new subject for case study 2. Alongside this, whilst the topic for case
+study 2 had changed, the feedback on the justification was still valid - therefore this has
+been ammended in section 3.6. In addition to this, Figure \ref{flow_chart}
+was created to help the reader visualise the experimentation process.
 
 ## Legal, Social and Ethical Implications
 
