@@ -203,6 +203,8 @@ saved with a name of the current timestamp (to avoid any duplicate file names). 
 times each for non-throttled, 4 times throttling, and six times throttling. This reduced outliers, and an average for 
 each metric was collected, before compiling into charts. 
 
+![Experiment Flow Chart \label{flow_chart}](./images/experiment.png)
+
 Webpack supports all ES5-compliant browsers - and if developers wish to support browsers older than this - polyfills 
 can be loaded to make the application compatible. When using Create React App, webpack's configuration is kept hidden. 
 This default is what will be used in this project to measure performance. This is because the programmer must actively 
