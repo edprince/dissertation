@@ -2,7 +2,15 @@
 
 # Appendices
 
-## Presentation
+## Communication Evidence
+![Supervisor Meeting 1](./images/meetings/1.jpg)
+![Supervisor Meeting 2](./images/meetings/2.jpg)
+![Supervisor Meeting 3](./images/meetings/3.jpg)
+![Supervisor Meeting 4](./images/meetings/4.jpg)
+![Supervisor Meeting 5](./images/meetings/5.jpg)
+![Supervisor Meeting 6](./images/meetings/6.jpg)
+
+### Presentation
 
 ![Presentation slide](./images/pres_1.png)
 ![Presentation slide](./images/pres_2.png)
@@ -23,6 +31,7 @@
 ![Presentation slide](./images/pres_17.png)
 ![Presentation slide](./images/pres_18.png)
 ![Presentation slide](./images/pres_19.png)
+
 
 ## Unbundled Profiling
 
