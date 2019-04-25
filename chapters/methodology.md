@@ -40,9 +40,6 @@ These bundlers are
 being tested using the testbed application to ensure consistency across all other parameters other
 than the bundler itself. 
 
-
-### Bundlers 
-
 To understand why bundlers are used - it is important to understand the history of JavaScript, and its 
 current state. JavaScript is a programming language, created in 1995 - and
 has been standardised with ECMA (European Computer Manufacturer's Association). Whilst the 9th edition 
@@ -52,6 +49,9 @@ be comprehensively compatible with browsers, the application must be written in 
 the issue that the newer versions of ECMAScript have introduced many features 
 of the language that offer superior development - meaning developers want to write their code in ES2015+.
 This is where a compiler like Babel comes in. Babel can take ES2015+ code, and convert it into ES5 code.
+
+
+### Bundlers 
 
 To adhere to good programming conventions, developers tend to build applications out of many modules, but 
 this raises more issues. To import a JavaScript file in HTML, you use a tag like so:

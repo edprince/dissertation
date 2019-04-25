@@ -4,9 +4,8 @@ header-includes: |
   \usepackage{authblk}
   \author{Edward George Prince}
   \affil{6151713}
-  \vspace{100mm}
-  \affil{Computer Science}
-  \affil{Department of Computing}
+  \affil{Supervised by Dr Norlaily Yaacob}
+  \affil{Computer Science, Department of Computing}
   \lstset{
     basicstyle=\ttfamily,
     breaklines=true,
@@ -27,10 +26,16 @@ subparagraph: yes
 \clearpage
 \begin{abstract}
   This paper looks at methods for optimising modern web applications for users with
-  low-powered smartphones. By analysing a testbed application, it is discovered that
-  performance optimisations can be made without sacraficing user experience. This was
+  low-powered smartphones. By analysing a testbed application across multiple JavaScript
+  frameworks and bundlers, it is discovered that
+  performance optimisations can be made without sacraficing user or developer experience. This was
   found using the Google Development Tools to analyse an app built with React, Node.js,
   Socket.io and Express.js.
+\end{abstract}
+\renewcommand{\abstractname}{Acknowledgements}
+\begin{abstract}
+A special thanks to Dan Prince for his unwavering encouragement and support in this
+project.
 \end{abstract}
 \pagebreak
 \tableofcontents
