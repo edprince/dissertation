@@ -11,6 +11,18 @@ tandem with this, Devtools provides accurate and reliable data on browser applic
 to throttle the CPU to judge performance on simulated lower-hardware. This would allow comparisons to be 
 drawn across the different CPU throttle amounts, but with no other parameter changes.
 
+To understand the decision for the case study subjects, first there must be a basic grasp on the history
+and current usage of JavaScript and ECMAScript. 
+
+## A Brief History and Analysis of JavaScript and ECMAScript
+JavaScript is a programming language created in 1995.
+ECMAScript was designed as a way to standardise JavaScript - and was first released in 1997.
+Versions have been regularly released, with ES6/ES2015 being the current modern standard. For
+this dissertation, it will be referred to as ES6 for consistency. The issue with ES6 is that 
+not all versions of browsers support ES6, many still only support up to ES5. This means developers
+are either stuck developing purely in ES5, limiting them to old features, or they can use the
+Babel compiler to compile their ES6 code into valid and compatibile ES5 - ensuring cross-browser
+compatibility, whilst having use of ES6 features. 
 
 
 ## Testbed Application
@@ -21,9 +33,15 @@ and Socket.io to communicate with a Node.js server also running Socket.io. On to
 makes use of several other libraries, such as Bootstrap, Moment, JQuery and Faker, giving a partially 
 realistic build to the application.
 
-## Bundlers 
+## Case Study One: Effect of Bundlers on Performance
 
-**Case Study 1** analyses the performance differences between two different modern bundlers.
+Case study 1 analyses the performance differences between two popular bundlers - Webpack and Rollup. 
+These bundlers are
+being tested using the testbed application to ensure consistency across all other parameters other
+than the bundler itself. 
+
+
+### Bundlers 
 
 To understand why bundlers are used - it is important to understand the history of JavaScript, and its 
 current state. JavaScript is a programming language, created in 1995 - and
@@ -59,14 +77,13 @@ and more. This leaves us being able to write modular code, in ES2015+, and still
 on older browsers. For the purpose of this project, two of the major bundlers were chosen to analyse: 
 Webpack and Rollup.
 
-### Webpack
+#### Webpack
 Webpack is the bundler used by the tool 'create-react-app', popular amongst developers for quickly getting React Apps
 set up. 
 Webpack turns each module into its own isolated function scope.
-**Case Study 2** analyses the performance differences between each of these frameworks.
 
 
-### Rollup
+#### Rollup
 
 Rollup puts everything into the same function scope.
 When measuring the performance of Rollup - it is anticipated that the execution time should
@@ -91,22 +108,34 @@ the function, which creates a new function: `bar()`. When the function execution
 function is created and destroyed 100 times. This costs processing, making it generally
 slower than non-nested functions.
 
+In each case, the bundler will:
+ * Bundle the JS files
+ * Bundle the CSS files
+ * Compile the JS into ES5
+ * Set up a server and serve the project
 
-| Framework | Size | Usage (Downloads in past year) |
+ The configuration file for each bundler is in the Appendix.
+
+
+## Case Study Two: Effect of Different JavaScript Frameworks on Performance
+
+Case study 2 analyses the performance difference between four different 
+
+### Frameworks
+| Framework | Size | Number of GitHub Stars |
 |---|---|---|
-| React | 106.6Kb | 1,786,699	|
-| Preact | 3Kb | 29,385 |
-| Inferno | 48K| 7744 |
-| Hyperappp | 1Kb | |
+| React | 106.6KB | 127,752	|
+| Preact | 3KB | 22,385 |
+| Inferno | 48KB | 13,619 |
+| Hyperappp | 1KB | 16,660 |
 
 Table: Framework Comparison \label{framework_comparison}
 
-## Frameworks
-**Case Study 2** will be analysing the performance differences between each of these frameworks. React has been chosen as
+React has been chosen as
 the benchmark framework - as the current leader in industry, and will be compared to three other frameworks, designed
 as faster alternatives.
 
-### React
+#### React
 "React is a declarative, efficient, and flexible JavaScript library for building user interfaces" (Reactjs.org)
 It was designed for component-based web development - making it easier for developers to create reusable components
 for the applications. It uses JSX, which allows usage of HTML tag syntax within components. At the time of writing,
@@ -121,7 +150,8 @@ As of 28th January 2018, Preact had 29,385 downloads, a 254.3% increase from the
 As of 28th January 2018, Inferno had 29,385 downloads, a 276.5% increase from the previous year.
 
 ### Hyperapp
-
+Hyperapp is a JavaScript framework for building web applications that uses the Elm-inspired approach
+to state management. GZipped and compressed, the framework is around 1KB (Bucaran 2018).
 
 ## Performance Profiling
 
@@ -132,7 +162,6 @@ of performance difference between unthrottled and throttled CPU with the same ap
 
 Initially, the unbundled version of the application was analysed, with an unthrottled CPU. This gives the initial 
 set of metrics that can be calculated against. These are: 
-
 
 | Metric | Description |
 |---|---|

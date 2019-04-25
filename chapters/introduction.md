@@ -1,11 +1,14 @@
 # Introduction  
-When developing for mobile phones, the devices used to optimise for, are the current standard
-of modern mobile phones - proving useful for a target audience of users able to buy this
-standard of device - but less so for the many people who are unable to be accessing web apps
+When developing for mobile phones, the devices to which web apps are optimised are the current standard
+of modern mobile phones. Whilst this proves useful for a target audience of users able to buy this
+standard of device - it is less so for the many people who are unable to access web apps
 on new smarthones. Much of the developing world uses mobile phones several generations behind
-what is in popular usage across developed countries. These smartphones are not as powerful
-as the current devices, and yet web applications can still be optimised to give a low-powered
-smartphone a high standard of user experience.
+what is in popular usage across developed countries. With Google, Mozilla, Microsoft and Huawei all
+releasing cheap smartphones for developing countries (Hiscott 2016), it is likely the developing world's
+mobile device population will follow a trend of being considerably less powerful than the mobile device
+population of developed 
+countries (Hiscott 2016). With over 98% mobile phone adoption in developing countries (Sharwood, 2017)
+this offers a large market of potential users for web applications.
 
 With the anticipation of a high speed network and low-power CPU future (more detail in chapter 2),
 it is important that applications are designed to run on lower-powered CPU's. To test this,
@@ -31,6 +34,10 @@ in developed countries - optimisations for low-powered CPU's is not a thriving r
 
 The Methodology chapter lays the ground work for the experiments to be conducted. It shows the
 techniques used to gain data, explains how they work, and justifies their selection for this project.
+The experiments are split up into component sections, each identifying a different area for potential optimisation. Each section has a brief summary, 
+a prediction of the expected results upo modification and re-profiling, and the actual results, 
+how the compare, and why they might differ to the predictions. The chapter is concluded with a 
+summary of all of the results, and how they relate to optimisations for low-powered smartphones.
 
 The Design and Implementation chapter describes exactly how the experiments were conducted, along with
 the results. The experiments are split into two case studies, analysing bundler performance, and
@@ -39,35 +46,20 @@ analysing front-end JavaScript framework performance.
 The Discussion chapter begins to weave the results into an argument which responds to the initial
 research question, along with providing assessment on the quality and validity of this research.
 
-The Project Management chapter.
+The Project Management chapter provides clarity and reflection on the process of
+creating this project, and the methodologies employed to ensure completion within the timeframe
+given.
 
-The Conclusion is where the extent to which the findings provide a suitable answer to the initial research
+The Conclusion highlights the extent to which the findings provide a suitable answer to the initial research
 question. It also highlights further areas for study regarding this research.
 
-## A Brief History of JavaScript
-ECMAScript was designed as a way to standardise JavaScript - and was first released in 1997.
-Versions have been regularly released, with ES6/ES2015 being the current modern standard. For
-this dissertation, it will be referred to as ES6 for consistency. The issue with ES6 is that 
-not all versions of browsers support ES6, many still only support up to ES5. This means developers
-are either stuck developing purely in ES5, limiting them to old features, or they can use the
-Babel compiler to compile their ES6 code into valid and compatibile ES5 - ensuring cross-browser
-compatibility, whilst having use of ES6 features. 
-
-A section on why ES Modules are relevant but not used.
-
-The methodology chapter presents the formation and execution of the experiments, and details 
-on how results could be replicated. The experiments are split up into component sections, 
-each identifying a different area for potential optimisation. Each section has a brief summary, 
-a prediction of the expected results upo modification and re-profiling, and the actual results, 
-how the compare, and why they might differ to the predictions. The chapter is concluded with a 
-summary of all of the results, and how they relate to optimisations for low-powered smartphones.
 
 ## Terminology
 
-**Devtools** Google Chrome Development Tools  
-**CDN** Content Delivery Network  
-**ES5** ECMAScript 5  
-**ES2015**  
-**Polyfill** The implementation of a feature for a browser that does not support the feature  
-**Create React App**  
-
+| Term | Definition |
+|---|---|
+| **Devtools** | A much longer definition than the term itself, even longer now |
+| **CDN**  | Content Delivery Network |
+| **ES5** | ECMAScript 5 |
+| **Polyfill** | Some |
+| **Babel** | Compiler |

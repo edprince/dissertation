@@ -35,6 +35,3 @@ subparagraph: yes
 \pagebreak
 \tableofcontents
 \pagebreak
-
-
-
