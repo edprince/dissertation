@@ -126,7 +126,7 @@ Table: Unbundled at 6x Throttle \label{unbundled_6x}
 ### At No Throttle
 
 
-|  **Run (0x)** | **Loading (ms)** | **Scripting (ms)** | **Rendering (ms)** | **Painting (ms)** | **Other (ms)** | **Idle (ms)** |
+|  Run (0x) | Loading (ms) | Scripting (ms) | Rendering (ms)** | Painting (ms) | Other (ms) | Idle (ms) |
 |----|---|---|---|---|---|---|
 |  1 | 12.2 | 2852.9 | 54.7 | 1.3 | 45.9 | 524.6 |
 |  2 | 13.1 | 3011.8 | 67.6 | 1 | 41.6 | 466 |
@@ -148,7 +148,7 @@ Table: Unbundled at 6x Throttle \label{unbundled_6x}
 |  18 | 12.5 | 2965.1 | 51.5 | 0.7 | 43.8 | 450.5 |
 |  19 | 13.2 | 2968.4 | 52.2 | 1.4 | 48.4 | 438.2 |
 |  20 | 12.7 | 2930.3 | 52.6 | 1 | 45.1 | 471.6 |
-|  **Average** | 12.785 | 2951.8 | 53.675 | 0.885 | 45.925 | 488.355 |
+|  Average | 12.785 | 2951.8 | 53.675 | 0.885 | 45.925 | 488.355 |
 
 Table: Bundled at No Throttle \label{bundled_0x}
 
