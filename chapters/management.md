@@ -11,19 +11,25 @@ endeavours. To build the testbed application - the iterative life cycle methodol
 allowing the application to quickly progress in the early stages, and gradually improve throughout
 the entire process. This is due to the acceptance that with an iterative lifecycle methodolgy there
 will be a lot of rework, particularly at the early stages of the project (Krutchen 2000).
+The testbed application was also built making use of version control (Git).
 
 With additions like the alternative frameworks, and the automated data
 collection script, making use of Puppeteer and the Devtools Web API - this method was effective,
 particularly for a one-person team. (This is where many of the other project management methodologies
-struggle to have an impact. Within the iterative lifecyle methodology approach on a macro level,
-on a micro level - a kanban approach was employed, utilising the GitHub Projects interface.
+struggle to have an impact). With the iterative lifecyle methodology being applied at both a micro and macro level,
+the kanban approach was employed to supplement it, utilising the GitHub Projects interface.
+
 
 ## Timeline
 
 Making use of Gantt Chart, and GitHub Projects feature to plan a schedule. Retrospecitvely,
 the project should have been planned in greater detail, allowing the Gantt chart to be less
-abstracted - making definitive goal setting more achievable. Alongside this, the supervisor
+abstracted initially - making definitive goal setting more achievable. Alongside this, the supervisor
 meetings were utilised to draw up goals and criteria to have achieved by the next session.
+This allowed the project to be split into weekly chunks that were integrated into the continually
+evolving Gantt Chart - laying out a clear and concise overall plan for projct completion. Supplementing
+the supervisor sessions, an (almost) weekly diary was kept to track project progress, available in
+Appendix F.
 
 ## Communication
 
@@ -32,7 +38,7 @@ the author, when meetings became a regular occurance, the project began to build
 and effectively. The supervision was of pivotol importance in relation to this project, with
 a prediction of difficulty progressing effectively during the early stages.
 
-Evidence of the meetings with the supervisor is located in Appendix [].
+Evidence of the meetings with the supervisor is located in Appendix A.
 
 ### Presentation Feedback
 

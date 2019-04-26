@@ -239,7 +239,9 @@ async function throttleSix(i) {
     const page = await browser.newPage();
     const client = await page.target().createCDPSession();
     await client.send('Emulation.setCPUThrottlingRate', { rate: 6 });
-    await page.tracing.start({ path: `traces/${DIR}/6x/${i}profile-${Date.now()}.json` });
+    await page.tracing.start({ 
+      path: `traces/${DIR}/6x/${i}profile-${Date.now()}.json` 
+    });
     await page.goto(URL);
     await page.tracing.stop();
     await browser.close();
@@ -250,7 +252,9 @@ async function throttleFour(i) {
     const page = await browser.newPage();
     const client = await page.target().createCDPSession();
     await client.send('Emulation.setCPUThrottlingRate', { rate: 4 });
-    await page.tracing.start({ path: `traces/${DIR}/4x/${i}profile-${Date.now()}.json` });
+    await page.tracing.start({ 
+      path: `traces/${DIR}/4x/${i}profile-${Date.now()}.json` 
+    });
     await page.goto(URL);
     await page.tracing.stop();
     await browser.close();
@@ -260,9 +264,48 @@ async function throttleNone(i) {
     const browser = await puppeteer.launch();
     const page = await browser.newPage();
     const client = await page.target().createCDPSession();
-    await page.tracing.start({ path: `traces/${DIR}/0x/${i}profile-${Date.now()}.json` });
+    await page.tracing.start({ 
+      path: `traces/${DIR}/0x/${i}profile-${Date.now()}.json` 
+    });
     await page.goto(URL);
     await page.tracing.stop();
     await browser.close();
 }
 ```
+
+## Appendix F: Project Diary
+
+### First Entry
+*28/01/2019*  
+I had a meeting with my supervisor today. We discussed current progress and direction. I will be working on producing a more highly detailed Gantt chart to demonstrate how I will work to the project timeline. I am also going to be working on the literature review.
+
+### Current Progress
+*05/02/2019*  
+The testbed web application has been built, utilising socket.io for realtime chatting functionality. I used React (a widely used modern front end JavaScript framework) to build the front end, and Express.js (popular backend Node.js library) for backend programming. I am using GitHub to version control the application, and the server is designed distinctly as its own entity - not tied to the front end at all - meaning they are not reliant on the other to work. To help isolate the problems - I am going to focus attention on optimising the front end - not the server.
+
+The report is coming along slowly - I now have a bare skeleton of the entire report, with elements from the project proposal being dropped in. I am going to work on some padding out of the literature review I conducted, and try to get a structure for the main literature review sorted.
+
+### Script
+*12/02/2019*  
+I have created a script that uses Puppeteer to open a headless browser with the application running, then automatically perform a trace, with simulated throttled CPU’s, and writes the resulting data into a JSON file and saves the file into the repository. I can then load up each of the JSON files into the Chrome Dev Tools, and it produces summary data on the trace. I can then write the results into a Google Sheet to generate averages and compare results. I have also mostly finalised the literature review, and have begun work on the Methodology Chapter.
+
+### Testbed Factorial
+*20/02/2019*  
+In order to make the testbed application somewhat more realistic, I needed to get the app to do some heavy lifting upon loading. To simulate this, I wrote a Factorial calculator function, and made the application solve factorial(1000) upon initialising. This gave a more realistic set of metrics on how the bundlers and frameworks perform at a higher stress load. After the meeting with my supervisor, we finalised what would go into the Methodology, and that splitting into a Methodology Chapter and a Design & Implementation Chapter would allow for a better report. The methodology will now just contain the relevant information about how and why the experiment was conducted in the manner it way - but not detailed information into the experiment. Alongside this, I tried to improve the automated script to not only collect the data, but automatically parse the profiles to output the relevant data. After spending several days researching and attempting an implementation - I decided to move on. This meant that for each performance profile that was collected, I needed to open the file in the Devtools and copy the relevant statistics over into a Google Spreadsheet.
+
+### Bundler Implementation
+*01/03/2019*  
+I have changed from using create-react-app to using a custom webpack configuration file to allow for more comparable results to Rollup. The create-react-app webpack configuration is all hidden, and has a lot of extra stuff that Rollup doesn’t do by default. Alongside this, I have been working on the Methodology chapter.
+
+### Rollup
+*08/03/2019*  
+I have now got both Webpack and Rollup implemented so the testbed application can be bundled using either, allowing for comparisons to be made.
+
+### Frameworks
+*17/03/2019*  
+There is now implementations of the testbed application written in React, Preact, Inferno and Hyperapp to allow performance profiling across all four frameworks. Using my automated script, I can make the app compile from any of the frameworks using either of the bundlers, before automatically collecting data on the performance, and saving to a Google Sheet. In addition to this, I have been researching legal and ethical implications of the project - but finding it difficult to find much relevant information.
+
+### Data Collection
+*01/04/2019*  
+I have now collected all of the relevant data for each combination of framework and bundler, and gather metrics for no throttling, 4x throttling and 8x throttling. All the data is saved in Google Sheets to allow for chart generation to help visualize the results. I have also been finalising the Methodology and Design &  Implementation chapters - now having all of the information required to finish them.
+

@@ -201,9 +201,16 @@ this point, the client emulation configuration was decided upon and sent to the 
 the correct emulation, and begin a timeline trace. Once finished, the trace data would be written to a JSON file, and 
 saved with a name of the current timestamp (to avoid any duplicate file names). The script would run the tracing 20 
 times each for non-throttled, 4 times throttling, and six times throttling. This reduced outliers, and an average for 
-each metric was collected, before compiling into charts. 
+each metric was collected, before compiling into charts. This technique for data collection has not been used in any of
+the relevant academic papers found in Chapter 2. The code for this script is found in Appendix E.
 
-![Experiment Flow Chart \label{flow_chart}](./images/experiment.png)
+![Experiment Flow Chart \label{flow_chart}](./images/flow_chart.png)
+
+As described in Figure \ref{flow_chart}, each version of the testbed application (e.g React, Hyperapp etc.) would be
+used as the input - hosting the app locally. Then the Puppeteer script would be run, loading the app and running a performance
+profile. The output of the script would be written to a file (using JavaScript's `date()` function to create unique
+file names. Each file could then be loaded into the Devtools and the inbuilt parser would display a summary of key information.
+This data was then written to a spreadsheet for further analysis.
 
 Webpack supports all ES5-compliant browsers - and if developers wish to support browsers older than this - polyfills 
 can be loaded to make the application compatible. When using Create React App, webpack's configuration is kept hidden. 
