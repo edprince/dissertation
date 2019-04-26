@@ -215,3 +215,54 @@ Table: Bundled at 4x Throttle \label{webpack_4x}
 |  Average | 51.475 | 17438.145 | 237.355 | 2.435 | 213.97 | 471.14 |
 
 Table: Bundled at 6x Throttle \label{webpack_6x}
+
+## Appendix E: Automation Code
+
+```javascript
+const puppeteer = require('puppeteer');
+let i = 0;
+const DIR = 'hyperapp-rollup';
+const URL = 'http://localhost:5000';
+
+let loop = setInterval(async () => {
+    if (i === 19) {
+        clearInterval(loop);
+    }
+    throttleSix(i);
+    throttleFour(i);
+    throttleNone(i);
+    i++;
+}, 20000)
+
+async function throttleSix(i) {
+    const browser = await puppeteer.launch();
+    const page = await browser.newPage();
+    const client = await page.target().createCDPSession();
+    await client.send('Emulation.setCPUThrottlingRate', { rate: 6 });
+    await page.tracing.start({ path: `traces/${DIR}/6x/${i}profile-${Date.now()}.json` });
+    await page.goto(URL);
+    await page.tracing.stop();
+    await browser.close();
+}
+
+async function throttleFour(i) {
+    const browser = await puppeteer.launch();
+    const page = await browser.newPage();
+    const client = await page.target().createCDPSession();
+    await client.send('Emulation.setCPUThrottlingRate', { rate: 4 });
+    await page.tracing.start({ path: `traces/${DIR}/4x/${i}profile-${Date.now()}.json` });
+    await page.goto(URL);
+    await page.tracing.stop();
+    await browser.close();
+}
+
+async function throttleNone(i) {
+    const browser = await puppeteer.launch();
+    const page = await browser.newPage();
+    const client = await page.target().createCDPSession();
+    await page.tracing.start({ path: `traces/${DIR}/0x/${i}profile-${Date.now()}.json` });
+    await page.goto(URL);
+    await page.tracing.stop();
+    await browser.close();
+}
+```
