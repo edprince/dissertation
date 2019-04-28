@@ -17,5 +17,5 @@ Another useful avenue for testing could be to utilise a more substantial
 open source application, for example the Hacker News clone on GitHub at
 https://github.com/vuejs/vue-hackernews-2.0. This would also reinforce
 the conclusions being made in this dissertation, with no uncertainty based
-on the validity of the testbed application as a source of possible outlying
+on the validity of the testbed application as a source of potential outlying
 results.

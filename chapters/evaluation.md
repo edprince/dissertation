@@ -10,6 +10,7 @@ to the other combinations.
 
 ## Case Study 1: Bundlers
 
+![Unbundled Chart](./images/unbundled_chart.png)
 
 ### Results of Webpack Bundling
 
@@ -33,6 +34,13 @@ Table: Rollup Results (cumulative ms) \label{rollup_results}
 | 4x | 12088.92 | 12077.82 | 11947.46 | 12005.86 |
 | 6x | 17711.29 | 17624.91 | 17694.07 | 17560.245 |
 | Total | 32899.72 | 32760.7 | 32723.23 | 32517.345 |
+
+![Rollup Chart](./images/rollup_chart.png)
+
+It is evident from profiling the application that has been bundled with
+Rollup has significantly reduced scripting times.
+
+
 
 ![Webpack vs Rollup \label{webpack_vs_rollup}](./images/webpack_vs_rollup.png)
 

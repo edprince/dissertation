@@ -54,5 +54,17 @@ was created to help the reader visualise the experimentation process.
 
 ## Legal, Social and Ethical Implications
 
-Potential for degrading software or devices.
-Any danger of associating devices to parts of the world.
+### MIT License
+
+All of the technologies being tested in this project are open source, and all licensed under
+the MIT license. This is one of the most permissive licenses, and means
+that the software created with these licenses can 
+
+Whilst now under the MIT licsense, it is worth noting that React used
+to be under the BSD+Patents license. which states the code is copyrighted by
+Facebook (the creators of React). If you sue Facebook for patent
+infringement, then your patent rights for React are automatically revoked
+(Kripalani 2017). The switch to MIT proved in response to the disappointment
+and uncertainty from its community (Wolff 2017).
+
+### Impact of Better User Experiences in the Developing World

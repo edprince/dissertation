@@ -27,11 +27,30 @@ compatibility, whilst having use of ES6 features.
 
 ## Testbed Application
 
-The testbed application is a realtime chatting application - an application with a genuine use anywhere 
-in the world. The front-end is built with React, making use of the popular Create React App library, 
-and Socket.io to communicate with a Node.js server also running Socket.io. On top of this, the app 
-makes use of several other libraries, such as Bootstrap, Moment, JQuery and Faker, giving a partially 
-realistic build to the application.
+In order to comprehensively test the technologies being analysed,
+a testbed application was required. For the purposes of this project,
+realtime chatting application was created - an application with 
+genuine use.
+
+### System Requirements
+The testbed application had to be:
+
+ * Made with modern JavaScript frameworks
+ * Browser compatible with older browsers
+ * Built with realistic dependencies
+ * Simulate heavy workload
+ * Functional
+
+ Initially, the application was built with React, and later re-written
+ several times using different front-end frameworks. Using bundlers
+ meant it could be written in ES6, but compiled to ES5 to run on older
+ browsers. The app utilises Socket.io to communicate with a Node.js 
+ server also running Socket.io. On top of this, the appmakes use of 
+ several other libraries, such as Bootstrap, Moment, JQuery and Faker, 
+ giving a partially realistic build to the application. To simulate
+ heavy workload, a factorial function was created, and called upon
+ initialisation with an input of 1000. This gave the application a
+ significant amount of work to do.
 
 ## Case Study One: Effect of Bundlers on Performance
 
@@ -109,6 +128,7 @@ function is created and destroyed 100 times. This costs processing, making it ge
 slower than non-nested functions.
 
 In each case, the bundler will:
+
  * Bundle the JS files
  * Bundle the CSS files
  * Compile the JS into ES5
@@ -144,9 +164,17 @@ React had 1,786,699 downloads, a 152.2% increase from the previous year (https:/
 https://books.google.co.uk/books?hl=en&lr=&id=NZCKCgAAQBAJ&oi=fnd&pg=PR6&dq=React+js&ots=KAwuYmAw-d&sig=GSstOX8Ag0OYJNGM8hT5nNDSlKU#v=onepage&q=React%20js&f=false
 
 ### Preact
+Preact is a fast alternative to React - using the same ES6 API (Yomi 2017).
+The only changes from React are trivial, but most can be accessed by making
+use of `preact-compat` - an additional package that re-integrates removed
+features.
 As of 28th January 2018, Preact had 29,385 downloads, a 254.3% increase from the previous year.
 
 ### Inferno
+Like Preact, Inferno is a lightweight JavaScript library that resembles
+React. It was created to examine analyse whether a UI library could improve
+web application experience on mobile devices by addresseing issues around
+battery drain, memory consumption and performance (Maida 2016).
 As of 28th January 2018, Inferno had 29,385 downloads, a 276.5% increase from the previous year.
 
 ### Hyperapp
@@ -162,21 +190,6 @@ of performance difference between unthrottled and throttled CPU with the same ap
 
 Initially, the unbundled version of the application was analysed, with an unthrottled CPU. This gives the initial 
 set of metrics that can be calculated against. These are: 
-
-| Metric | Description |
-|---|---|
-| Load time | Total load time for page resources to be rendered |
-| TTI | Time to interactive (e.g When the user can interact with page) |
-| Page Weight | Accumulated total file size |
-| Loading | Parsing, sending/receiving requests |
-| Scripting | Compiling and evaluating scripts |
-| Rendering | Executing page layout |
-| Painting | Drawing the render to the screen |
-| Other | |
-| Idle | Time spent waiting |
-
-Table: Devtools terminology \label{devtools_terminology}
-
 
 Then a x4 throttle on the CPU was selected, and the again, giving a new set of results. From here, it was possible to 
 calculate the percentage increase from the unthrottled set to the throttled set.
