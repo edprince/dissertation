@@ -9,7 +9,7 @@ successful, and avoid wasted time in the future. Whilst generally proceedings we
 there were definite lessons learned from this project that can and will be applied to future
 endeavours. To build the testbed application - the iterative life cycle methodology was employed,
 allowing the application to quickly progress in the early stages, and gradually improve throughout
-the entire process. This is due to the acceptance that with an iterative lifecycle methodolgy there
+the entire process. This is due to the acceptance that with an iterative lifecycle methodology there
 will be a lot of rework, particularly at the early stages of the project (Krutchen 2000).
 The testbed application was also built making use of version control (Git).
 
@@ -22,20 +22,22 @@ the kanban approach was employed to supplement it, utilising the GitHub Projects
 
 ## Timeline
 
-Making use of Gantt Chart, and GitHub Projects feature to plan a schedule. Retrospecitvely,
+Making use of Gantt Chart (Figure \ref{gantt}), and GitHub Projects feature to plan a schedule. Retrospecitvely,
 the project should have been planned in greater detail, allowing the Gantt chart to be less
 abstracted initially - making definitive goal setting more achievable. Alongside this, the supervisor
 meetings were utilised to draw up goals and criteria to have achieved by the next session.
 This allowed the project to be split into weekly chunks that were integrated into the continually
-evolving Gantt Chart - laying out a clear and concise overall plan for projct completion. Supplementing
+evolving Gantt Chart - laying out a clear and concise overall plan for project completion. Supplementing
 the supervisor sessions, an (almost) weekly diary was kept to track project progress, available in
 Appendix F.
+
+![Initial Gantt Chart \label{gantt}](./images/gantt.png)
 
 ## Communication
 
 Whilst it took longer than planned to contact the project supervisor - a recognised mistake from
-the author, when meetings became a regular occurance, the project began to build steadily
-and effectively. The supervision was of pivotol importance in relation to this project, with
+the author, when meetings became a regular occurence, the project began to build steadily
+and effectively. The supervision was of pivotal importance in relation to this project, with
 a prediction of difficulty progressing effectively during the early stages.
 
 Evidence of the meetings with the supervisor is located in Appendix A.
@@ -49,7 +51,7 @@ send a more optimised bundle for a device. Whilst achievable as an experiment - 
 would likely not have shed any new light on the area - therefore the JavaScript frameworks
 comparison became the new subject for case study 2. Alongside this, whilst the topic for case
 study 2 had changed, the feedback on the justification was still valid - therefore this has
-been ammended in section 3.6. In addition to this, Figure \ref{flow_chart}
+been amended in section 3.6. In addition to this, Figure \ref{flow_chart}
 was created to help the reader visualise the experimentation process.
 
 ## Legal, Social and Ethical Implications
@@ -58,9 +60,14 @@ was created to help the reader visualise the experimentation process.
 
 All of the technologies being tested in this project are open source, and all licensed under
 the MIT license. This is one of the most permissive licenses, and means
-that the software created with these licenses can 
+that the software created with these licenses can keep source code
+private when distributing software that makes use of any of these
+technologies. For many commercial companies - this is much more
+desirable than using any software licensed under less permissive
+licenses, such as the GPL version 2 - which would force them to make their
+source code available (GNU 1989).
 
-Whilst now under the MIT licsense, it is worth noting that React used
+Whilst now under the MIT license, it is worth noting that React used
 to be under the BSD+Patents license. which states the code is copyrighted by
 Facebook (the creators of React). If you sue Facebook for patent
 infringement, then your patent rights for React are automatically revoked
@@ -68,3 +75,8 @@ infringement, then your patent rights for React are automatically revoked
 and uncertainty from its community (Wolff 2017).
 
 ### Impact of Better User Experiences in the Developing World
+
+Better web app design encourages growth of users. If developing
+countries were to see more web apps were catering for consumption
+on the popular lower-powered devices, evidence shows that more
+people would adopt devices. Alongside this, it

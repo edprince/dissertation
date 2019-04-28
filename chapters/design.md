@@ -28,7 +28,7 @@ framework about three throttling speeds - 0x, 4x and 6x.
 
 Using this final matrix, the tests were run with the hardware specified
 in table \ref{cpu_specs}. Each combination of framework and bundler was
-tested 20 times separately in the headless chrome browser. This eliminates
+tested 20 times separately in the headless Chrome browser. This eliminates
 the possibility of an outlier being used if a single measurement is taken.
  
 ## Case 1 - Bundling
@@ -47,8 +47,8 @@ the rendering and painting times will not fluctuate much if at all -
 as the same content is still being calculated, and exactly the same 
 page is still being painted onto the screen. Loading and scripting 
 times are expected to be where the fluctuation will be seen. It is
-expected there will be a tradeoff, and the final score will depend on
-the weighting of that tradeoff. Whilst the browser must do some extra
+expected there will be a trade-off, and the final score will depend on
+the weighting of that trade-off. Whilst the browser must do some extra
 work when parsing the bundled version of the scripts, it also sees
 the performance benefits as described in section 3.4.1. This also
 backs up the prediction that of the two bundlers, Rollup should yield
@@ -68,7 +68,7 @@ frameworks marketing themselves as faster alternatives to React. With
 Hyperapp being the smallest of all of them, there is a marginal weighting
 to expect Hyperapp to be the best performer.
 
-## Summary
+## Summary \label{prediction}
 Before analysing the results, there are two key predictions - that
 Rollup should outperform  Webpack - and Hyperapp is expected to be
 the best performing framework. This creates a concise summated prediction
@@ -76,4 +76,3 @@ statement.
 
 The optimal performance of the testbed application should be seen using
 the combination of Hyperapp and Rollup.
-

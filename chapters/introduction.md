@@ -48,13 +48,14 @@ analysing front-end JavaScript framework performance.
 
 The Discussion chapter begins to weave the results into an argument which responds to the initial
 research question, along with providing assessment on the quality and validity of this research.
+It also highlights further areas for study regarding this research.
 
 The Project Management chapter provides clarity and reflection on the process of
 creating this project, and the methodologies employed to ensure completion within the timeframe
 given.
 
 The Conclusion highlights the extent to which the findings provide a suitable answer to the initial research
-question. It also highlights further areas for study regarding this research.
+question. 
 
 
 ## Terminology
@@ -64,13 +65,16 @@ question. It also highlights further areas for study regarding this research.
 | **0x** | No CPU throttling being applied |
 | **4x** | Four times CPU throttling being applied |
 | **6x** | Six times CPU throttling being applied |
-| **Devtools** | Google's suite of developer tools built directly into Chrome |
+| **Chrome** | Google Chrome Browser |
+| **DevTools** | Google's suite of developer tools built directly into Chrome |
 | **CDN**  | Content Delivery Network |
 | **ES5** | ECMAScript 5 |
-| **Polyfill** | Some |
-| **Babel** | Compiler |
+| **ES2015** | ECMAScript 2015, the version after ES5 |
+| **Babel** | JavaScript compiler, often used for converting ES2015+ to ES5 |
+| **Polyfill** | Browser feature implementation that isn't naturally supported |
+| **Node** | Nodejs, a JavaScript runtime built on Chrome's V8 engine |
 
-### Devtools-Specific Terminology
+### DevTools-Specific Terminology
 
 | Metric | Description |
 |---|---|
@@ -81,5 +85,4 @@ question. It also highlights further areas for study regarding this research.
 | **Scripting** | Compiling and evaluating scripts |
 | **Rendering** | Executing page layout |
 | **Painting** | Drawing the render to the screen |
-| **Other** | |
 | **Idle** | Time spent waiting |

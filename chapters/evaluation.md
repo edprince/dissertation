@@ -3,7 +3,7 @@
 # Evaluation and Results
 
 To find an overall score for each combination, the 20 results collected
-were averaged to create a sinlge score, before the average at each throttle
+were averaged to create a single score, before the average at each throttle
 threshold were accumulated to give a final overall score. This represents the
 overall time the CPU is processing. These final scores can then be compared
 to the other combinations.
@@ -55,3 +55,12 @@ the axes have been swapped, and the range has been appropriately shifted and sca
 shows that regardless of the bundler used, Hyperapp has the best performance of all four frameworks.
 
 ![Frameworks \label{framework_chart}](./images/framework_chart.png)
+
+## Summary
+
+Whilst only seemingly negligible improvements are discovered when
+comparing these frameworks and bundlers, Google stated that a 400
+millisecond delay correlates to a 0.44% drop in search volume. With
+3.896 billions internet users worldwide in 2018 (Statista 2019),
+that 0.44% represents 17,142,400 users. This gives credibility to
+the marginal improvements found by using Hyperapp and Rollup.

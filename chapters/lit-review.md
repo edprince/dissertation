@@ -22,12 +22,14 @@ increase in mobile devices globally.
 
 ## CPU
 
-[Criticism checklist]
 It is suggested that network round-trip time is a major problem. Whilst this may have been true at the 
 time, due to the increase in network capacity, and the trends shown so far, it could be assumed that 
 time-based network problems become increasingly less relevant, with the hardware-based issues becoming 
 more prominent. Particularly in developed countries, modern smartphones with the latest hardware are 
 readily available, which is why this project focuses on mobile phones in usage in the developing world.
+This evidence is collected through a well-thought out series of experiments resulting
+in consistent, communicated correctly with no evident omissions. This gives
+credibility to these results.
 
 Over the last 20 years, Moore’s Law has begun to plateau (Simonite 2016), demonstrated by Figure \ref{moore} 
 and hardware capability increases along with it. 
@@ -47,12 +49,11 @@ growth was reported in Africa, where the percentage of people using the
 Internet increased from just 2.1% in 2005 to 24.4% in 2018” (ITWeb, 2018). 
 Containing a large number of developing countries, by looking at Africa as 
 a whole, and Kenya as a microcosm - we can see there is a likelihood of a 
-fast network future - and with the plateau in Moore’s Law, a likelihood of 
+fast network future. With the plateau in Moore’s Law, a likelihood of 
 stagnation in CPU performance increases. 
 
 A fast network future may lead to an emergence in prioritisation of CPU-based 
-optimisation, over decreasing app sizes - which would have an increasingly 
-negligible effect as network speeds improve. There has also been extensive 
+optimisation. There has also been extensive 
 research on optimization over networks already - reducing content, using 
 CDN’s, compressing content, utilising browser caching techniques (Iliev 2014), 
 and front end optimisations for modern devices. This research will avoid 
@@ -73,22 +74,25 @@ CPU-intensive applications for mobile devices. Wang et al. suggest that
 the most costly area for TTI is resource loading - which, as the sources are 
 credible, makes sense - however no speculation is offered about the state of 
 the future of processors and networks, making the research presently relevant, 
-but perhaps not in years to come.
+but perhaps not in years to come. These conclusions are the result of
+an experiment conducted by the authors, and backed up consistently
+by relevant academic papers.
 
 In summary - the browser is an intensive program, and heavy computational
 activities are the main bottlenecks.
 
 ## Mobile Web Browser
 
-[criticism checklist]
 There are also many comparisons made between the mobile browser and 
 desktop browser, over the same network speed - finding that the mobile
-version can take up to nine times as long to load. As they are on the 
+version can take up to nine times as long to load (Wang et al. 2013). As they are on the 
 same network - we know that this is therefore down to the hardware and
 mobile browser - not server-to-client issues. Suggestions have been 
 made that more effort should be put into making mobile browser 
 optimisations - with which future developers could utilise to make web
-applications more globally usable.
+applications more globally usable. Whilst this research is not founded
+on data collected first-hand, it is rigorously supported by multiple
+credible academic sources.
 
 ## Development Issues
 
@@ -122,12 +126,18 @@ will focus on JavaScript reduction to help lower the load on the CPU.
 ## Summary
 
 Optimisation over networks is a popular topic, with an array of literature covering
-the subject. This helps guide this research fill the gap in front-end optimisations.
-Following on from the research in "Analysing Mobile Web Browser Energy Consumption",
-this project will look at ways to reduce JavaScript by using Bundlers, and a comparison
-between two different bundlers.
+the subject. This helps guide this research in starting to fill the gap in front-end optimisations.
+Following on from the research conducted by Thiagarajan et al,
+this project will look at ways to reduce JavaScript by using and comparing two
+different bundlers - Webpack and Rollup.
 
 There is a distinct lack of literature based around front-end JavaScript frameworks,
 which, along with the bundlers creates the foundation of this research. The following
 chapter will outline how an experiment is created to test the performance of a testbed
 web application whilst using different technologies.
+
+The experiments conducted in this dissertation shall be run using
+the Google Chrome browser. Not only does this browser give acces to
+the use of the comprehensive DevTools suite and Puppeteer, but it
+is also the most popular browser, with 62.63% of global traffic using
+it, ahead of Safari at 15.56% (GlobalStats 2019).

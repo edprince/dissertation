@@ -15,14 +15,31 @@ To understand the decision for the case study subjects, first there must be a ba
 and current usage of JavaScript and ECMAScript. 
 
 ## A Brief History and Analysis of JavaScript and ECMAScript
-JavaScript is a programming language created in 1995.
-ECMAScript was designed as a way to standardise JavaScript - and was first released in 1997.
-Versions have been regularly released, with ES6/ES2015 being the current modern standard. For
-this dissertation, it will be referred to as ES6 for consistency. The issue with ES6 is that 
-not all versions of browsers support ES6, many still only support up to ES5. This means developers
-are either stuck developing purely in ES5, limiting them to old features, or they can use the
-Babel compiler to compile their ES6 code into valid and compatibile ES5 - ensuring cross-browser
-compatibility, whilst having use of ES6 features. 
+ECMAScript (European Computer Manufacturer's Association) was 
+designed as a way to standardise JavaScript
+(a programming language created in 1995) - and was first released in 1997.
+Versions have been regularly released, with ES6/ES2015 being the current modern standard.
+Initially it was named ES6, but later renamed ES2015. For consistency,
+this dissertation will always refer to it as "ES2015". Whilst the 
+9th edition of ECMAScript (ES2018) was finalised in June 2018, browsers
+are some way behind, with only modern browsers supporting the features
+of ES2015 - limiting them to old features, or they can use a compiler
+such as Babel to compile their ES2015 code into valid and compatibile ES5 - ensuring cross-browser
+compatibility, whilst having use of ES2015 features. 
+
+## Puppeteer
+
+Puppeteer is a Node Library which provides a high-level API to control
+headless or non-headless Chrome instances over the DevTools protocol.
+This allows programmatic control over the browser, offering automation
+capabilities. The DevTools protocol has the ability to set the throttle
+speed of the browser when running a performance profile - lending
+itself perfectly for the experiment being conducted in the following
+chapter. Rather than manually opening the testbed application, selecting
+the throttle speed, and running a performance profile, Puppeteer allows
+all of this to be automated - with the resulting performance profile
+being saved into its own file. This increased the number of experiments
+it would be feasible to run - adding credibility to the results collected.
 
 
 ## Testbed Application
@@ -43,7 +60,7 @@ The testbed application had to be:
 
  Initially, the application was built with React, and later re-written
  several times using different front-end frameworks. Using bundlers
- meant it could be written in ES6, but compiled to ES5 to run on older
+ meant it could be written in ES2015, but compiled to ES5 to run on older
  browsers. The app utilises Socket.io to communicate with a Node.js 
  server also running Socket.io. On top of this, the appmakes use of 
  several other libraries, such as Bootstrap, Moment, JQuery and Faker, 
@@ -59,15 +76,6 @@ These bundlers are
 being tested using the testbed application to ensure consistency across all other parameters other
 than the bundler itself. 
 
-To understand why bundlers are used - it is important to understand the history of JavaScript, and its 
-current state. JavaScript is a programming language, created in 1995 - and
-has been standardised with ECMA (European Computer Manufacturer's Association). Whilst the 9th edition 
-of ECMAScript (ES2018) was finalised in June 2018, only modern browsers can
-read ES2015 and above, meaning that if developers want their applications to 
-be comprehensively compatible with browsers, the application must be written in ES2015. This raises
-the issue that the newer versions of ECMAScript have introduced many features 
-of the language that offer superior development - meaning developers want to write their code in ES2015+.
-This is where a compiler like Babel comes in. Babel can take ES2015+ code, and convert it into ES5 code.
 
 
 ### Bundlers 
@@ -164,7 +172,7 @@ React had 1,786,699 downloads, a 152.2% increase from the previous year (https:/
 https://books.google.co.uk/books?hl=en&lr=&id=NZCKCgAAQBAJ&oi=fnd&pg=PR6&dq=React+js&ots=KAwuYmAw-d&sig=GSstOX8Ag0OYJNGM8hT5nNDSlKU#v=onepage&q=React%20js&f=false
 
 ### Preact
-Preact is a fast alternative to React - using the same ES6 API (Yomi 2017).
+Preact is a fast alternative to React - using the same ES2015 API (Yomi 2017).
 The only changes from React are trivial, but most can be accessed by making
 use of `preact-compat` - an additional package that re-integrates removed
 features.
@@ -225,12 +233,16 @@ profile. The output of the script would be written to a file (using JavaScript's
 file names. Each file could then be loaded into the Devtools and the inbuilt parser would display a summary of key information.
 This data was then written to a spreadsheet for further analysis.
 
-Webpack supports all ES5-compliant browsers - and if developers wish to support browsers older than this - polyfills 
-can be loaded to make the application compatible. When using Create React App, webpack's configuration is kept hidden. 
-This default is what will be used in this project to measure performance. This is because the programmer must actively 
-"eject" their application to access customisation of webpack configuration. 
+Webpack supports all ES5-compliant browsers - and if developers 
+wish to support browsers older than this - polyfills 
+can be loaded to make the application compatible. When using 
+Create React App, webpack's configuration is kept hidden as a 
+way to abstract complexity away from the developer. If they want 
+to, the developer can still edit the Webpack configuration
+files by "ejecting" their application.
 
-Why I chose case 1, 2 etc. (justify with example - expected result)
-Make a comparison table between predicted/actual results with discussion of relevance
-Justify reasoning for cases
-Requirements flow chart + descriptions
+For this reason, to avoid any bias, this project will not
+use `create-react-app` as the method of testing Webpack. Instead
+webpack will be added manually, allowing full control over the
+configuration file. This provides a closer and fairer comparison to
+Rollup. 
