@@ -54,7 +54,7 @@ Together, Figures \ref{moore} and \ref{kenya} allude to the likely outcome of a 
 
 “Of all ITU [International Telecommunication Union] regions, the strongest 
 growth was reported in Africa, where the percentage of people using the 
-Internet increased from just 2.1% in 2005 to 24.4% in 2018” (ITWeb, 2018). 
+Internet increased from just 2.1% in 2005 to 24.4% in 2018” (ITWeb 2018). 
 Containing a large number of developing countries, by looking at Africa as 
 a whole, and Kenya as a microcosm - we can see there is a likelihood of a 
 fast network future. With the plateau in Moore’s Law, a likelihood of 

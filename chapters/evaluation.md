@@ -4,9 +4,9 @@
 
 To find an overall score for each combination, the 20 results collected
 were averaged to create a single score, before the average at each throttle
-threshold were accumulated to give a final overall score. This represents the
-overall time the CPU is processing. These final scores can then be compared
-to the other combinations.
+threshold were accumulated to give a final overall score. This represents the overall time the CPU is processing. These final scores can then be compared
+to the other combinations. A sample of the data is available in Appendix D, with
+the full data available in a Google Sheet (https://docs.google.com/spreadsheets/d/15fo0SEJk1VD0dxm5M7m6U4i8I6WDEQw-V5PXe4QvuEM/edit?usp=sharing).
 
 ## Case Study 1: Bundlers
 
@@ -64,3 +64,5 @@ millisecond delay correlates to a 0.44% drop in search volume (Brutlag 2009). Wi
 3.896 billion internet users worldwide in 2018 (Statista 2019),
 that 0.44% represents 17.14 million users. This gives credibility to
 the marginal improvements found by using Hyperapp and Rollup.
+
+

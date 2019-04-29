@@ -13,7 +13,7 @@ the entire process. This is due to the acceptance that with an iterative lifecyc
 will be a lot of rework, particularly at the early stages of the project (Krutchen 2000).
 
 With additions like the alternative frameworks, and the automated data
-collection script, making use of Puppeteer and the Devtools Web API - this method was effective,
+collection script, making use of Puppeteer and the DevTools Web API - this method was effective,
 particularly for a one-person team. (This is where many of the other project management methodologies
 struggle to have an impact). 
 The testbed application was also built making use of version control (Git)

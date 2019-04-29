@@ -19,12 +19,8 @@ Table: CPU Specifications \label{cpu_specs}
 ## Testing Matrix
 
 For the final results, each bundler would be tested with each
-framework about three throttling speeds - 0x, 4x and 6x.
-
-| Bundler | React | Preact | Inferno | Hyperapp |
-|---|---|---|--|---|
-| Webpack | 0x, 4x, 6x | 0x, 4x, 6x | 0x, 4x, 6x | 0x, 4x, 6x |
-| Rollup | 0x, 4x, 6x | 0x, 4x, 6x | 0x, 4x, 6x | 0x, 4x, 6x |
+framework over three throttling thresholds - 0x, 4x and 6x. This
+gives the final testing matrix.
 
 Using this final matrix, the tests were run with the hardware specified
 in table \ref{cpu_specs}. Each combination of framework and bundler was
@@ -59,7 +55,7 @@ better performance.
 With the application re-written in four different frameworks - React,
 Preact, Inferno and Hyperapp, the testing required using each version
 along with each bundler, and running the Puppeteer script on the resulting
-locally hosted application.
+locally-hosted application.
 
 ### Prediction
 

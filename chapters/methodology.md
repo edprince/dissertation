@@ -171,9 +171,8 @@ as faster alternatives.
 "React is a declarative, efficient, and flexible JavaScript library for building user interfaces" (Reactjs.org)
 It was designed for component-based web development - making it easier for developers to create reusable components
 for the applications. It uses JSX, which allows usage of HTML tag syntax within components. At the time of writing,
-React is in use across 735,040 websites (https://www.similartech.com/technologies/react-js). As of January 28th, 2018,
-React had 1,786,699 downloads, a 152.2% increase from the previous year (https://jsreport.io/javascript-frameworks-by-the-numbers-winter-2018/).
-https://books.google.co.uk/books?hl=en&lr=&id=NZCKCgAAQBAJ&oi=fnd&pg=PR6&dq=React+js&ots=KAwuYmAw-d&sig=GSstOX8Ag0OYJNGM8hT5nNDSlKU#v=onepage&q=React%20js&f=false
+React is in use across 735,040 websites (SimilarTech 2019). As of January 28th, 2018,
+React had 1,786,699 downloads, a 152.2% increase from the previous year (Hannah 2018).
 
 ### Preact
 Preact is a fast alternative to React - using the same ES2015 API (Yomi 2017).
@@ -252,7 +251,7 @@ This data was then written to a spreadsheet for further analysis.
 Webpack supports all ES5-compliant browsers - and if developers 
 wish to support browsers older than this - polyfills 
 can be loaded to make the application compatible. When using 
-Create React App, webpack's configuration is kept hidden as a 
+`create-react-app`, webpack's configuration is kept hidden as a 
 way to abstract complexity away from the developer. If they want 
 to, the developer can still edit the Webpack configuration
 files by "ejecting" their application.
@@ -260,5 +259,5 @@ files by "ejecting" their application.
 For this reason, to avoid any bias, this project will not
 use `create-react-app` as the method of testing Webpack. Instead
 webpack will be added manually, allowing full control over the
-configuration file. This provides a closer and fairer comparison to
-Rollup. 
+configuration file (Appendix H). This provides a closer and fairer comparison to
+Rollup (configuration file in Appendix G). 

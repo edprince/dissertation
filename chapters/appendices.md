@@ -309,3 +309,109 @@ There is now implementations of the testbed application written in React, Preact
 *01/04/2019*  
 I have now collected all of the relevant data for each combination of framework and bundler, and gather metrics for no throttling, 4x throttling and 8x throttling. All the data is saved in Google Sheets to allow for chart generation to help visualize the results. I have also been finalising the Methodology and Design &  Implementation chapters - now having all of the information required to finish them.
 
+## Appendix G: Rollup Configuration Code
+
+```javascript
+import babel from 'rollup-plugin-babel';
+import resolve from 'rollup-plugin-node-resolve';
+import commonjs from 'rollup-plugin-commonjs';
+import replace from 'rollup-plugin-replace';
+import css from 'rollup-plugin-css-porter';
+import server from 'rollup-plugin-live-server';
+
+// This config will allow you to work on the app and optimize for development
+// experience. It will not produce optimized bundles, so don't use it for
+// benchmarking!
+
+let framework = process.env.framework || "react";
+
+export default {
+  input: `src/${framework}/index.js`,
+  output: {
+    file: 'build/js/bundle.js',
+    format: 'iife',
+    sourceMap: 'inline'
+  },
+  plugins: [
+    server({
+      port: 5000,
+      host: '0.0.0.0',
+      root: './build',
+      file: 'index.html',
+      open: false,
+      wait: 500
+    }),
+
+    resolve({ browser: true }),
+
+    babel({
+      exclude: 'node_modules/**',
+    }),
+
+    replace({
+      'process.env.NODE_ENV': JSON.stringify('development')
+    }),
+
+    commonjs({
+      include: [
+        'node_modules/**',
+      ],
+      exclude: [
+        'node_modules/process-es6/**',
+      ],
+      namedExports: {
+        'node_modules/react/index.js': ['Children', 'Component', 'PropTypes', 'createElement'],
+        'node_modules/react-dom/index.js': ['render'],
+      }
+    }),
+
+    css({
+      dest: 'build/css/bundle.css'
+    })
+  ]
+}
+```
+
+## Appendix H: Webpack Configuration Code
+
+```javascript
+let path = require("path");
+let MiniCssExtractPlugin = require('mini-css-extract-plugin');
+let devServer = require('webpack-dev-server');
+
+module.exports = {
+  mode: "production",
+  entry: path.resolve(__dirname, `./src/${process.env.framework}/index.js`),
+  output: {
+    path: path.resolve(__dirname, "build"),
+    filename: "js/bundle.js",
+  },
+  devServer: {
+    contentBase: path.join(__dirname, 'build'),
+    compress: true,
+    port: 5000
+  },
+  module: {
+    rules: [
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        use: "babel-loader",
+      },
+      {
+        test: /\.css$/,
+        use: [
+          MiniCssExtractPlugin.loader,
+          'css-loader',
+        ],
+      },
+    ]
+  },
+  plugins: [
+    new MiniCssExtractPlugin({
+      filename: "css/bundle.css",
+    })
+  ]
+};
+```
+

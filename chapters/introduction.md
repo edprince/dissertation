@@ -5,7 +5,7 @@ a current smartphone versus the Apollo-mission-era computers,
 the iPhone 6 processor clock speed is 32,600 times faster than the
 Apollo-era processors (Puiu 2019). Whilst not quite the same scale
 of gulf - there exists a distinct difference between the quality
-of smartphone in popular usage across developing countries versus
+of smartphone in popular usage across developed countries versus
 smartphones in popular usage across developing countries (Hiscott 2016). Additionally,
 there is a distinct lack of research into optimising web applications
 for lower power smartphones - contextualising the importance of
@@ -19,8 +19,7 @@ countries (Hiscott 2016). With over 98% mobile phone adoption in developing coun
 this offers a large market of potential users for web applications.
 
 A future high speed networks and lower-powered CPU's (more detail in chapter 2),
-there is a strong possibility that a trend of developing for lower-powered CPU's 
-may form. In anticipation of such a trend, this research is focused around
+may indicate a trend of developing for lower-powered CPU's. In anticipation of such a trend, this research is focused around
 performing an analysis of two major components to modern web applications:
 bundlers and JavaScript user interface frameworks. 
 
@@ -34,7 +33,7 @@ are compatible with older browsers - and making sure the application runs on tho
 In summary - the applications must be browser compatible for older browsers, and should be made
 with modern JavaScript frameworks and techniques, as not to hinder potential developers. 
 
-These objectives will be tested by using the Google Chrome Devtools to monitor the CPU-throttled
+These objectives will be tested by using the Google Chrome DevTools to monitor the CPU-throttled
 performance, and different technology implementations that allow comprehensive browser compatibility.
 There is an expectation that the lighter front-end frameworks perform best.
 
@@ -72,6 +71,7 @@ question.
 
 | Term | Definition |
 |---|---|
+| **Developing Countries** | As defined by the United Nations (UN 2014:146) | 
 | **0x** | No CPU throttling being applied |
 | **4x** | Four times CPU throttling being applied |
 | **6x** | Six times CPU throttling being applied |
@@ -83,6 +83,7 @@ question.
 | **Babel** | JavaScript compiler, often used for converting ES2015+ to ES5 |
 | **Polyfill** | Browser feature implementation that isn't naturally supported |
 | **Node** | Nodejs, a JavaScript runtime built on Chrome's V8 engine |
+| **JSX** | Preprocessing step to add XML syntax to JavaScript |
 
 ### DevTools-Specific Terminology
 
