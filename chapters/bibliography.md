@@ -7,6 +7,7 @@
 * Brutlag, J. (2009) *Speed Matters* [online] available at  
 \<https://ai.googleblog.com/2009/06/speed-matters.html\> [25 April 2019]
 * Bucaran, J. (2018) *Hyperapp: The 1 KB Javascript Library For Building Front-End Apps* [online] available from \<https://www.sitepoint.com/hyperapp-1-kb-javascript-library/\> [24 April 2019]
+* Dahir, A., L. (2016) *Smartphone use has doubled in Africa in two years* [online] available at \<https://qz.com/africa/748354/smartphone-use-has-more-than-doubled-in-africa-in-two-years/\> [23 April 2019]
 * GlobalStats (2019) *Browser Market Share Worldwide* [online] available from \<http://gs.statcounter.com/\> [28 April 2019]
 * GNU (1989) *GNU General Public License, version 2* [online] available from \<https://www.gnu.org/licenses/gpl-2.0.html\> [28 April 2019]
 * Hiscott, R. (2016) *The Cheap Smartphones Competing For The Developing World's Internet* [online] available from  
