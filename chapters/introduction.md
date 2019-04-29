@@ -19,8 +19,7 @@ countries (Hiscott 2016). With over 98% mobile phone adoption in developing coun
 this offers a large market of potential users for web applications.
 
 A future high speed networks and lower-powered CPU's (more detail in chapter 2),
-there is a strong possibility that a trend of developing for lower-powered CPU's 
-may form. In anticipation of such a trend, this research is focused around
+may indicate a trend of developing for lower-powered CPU's. In anticipation of such a trend, this research is focused around
 performing an analysis of two major components to modern web applications:
 bundlers and JavaScript user interface frameworks. 
 
