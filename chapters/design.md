@@ -37,7 +37,7 @@ To test each bundlers performance, the testbed application was bundled
 using the configuration files in the appendix (Rollup configuration in Appendix G,
 Webpack configuration in Appendix H). One the application has been bundled
 and served, the Puppeteer scripts found in Appendix E was used to run the
-Devtools profiling.
+DevTools profiling.
 
 ### Prediction
 

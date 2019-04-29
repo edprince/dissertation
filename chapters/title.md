@@ -24,18 +24,22 @@ subparagraph: yes
 ![Certificate of Ethics](./certificate.jpg)
 \thispagestyle{empty}
 \clearpage
+![Certificate of Ethics](./statement.png)
+\thispagestyle{empty}
+\clearpage
 \begin{abstract}
   This paper looks at methods for optimising modern web applications for users with
-  low-powered smartphones. By analysing a testbed application across multiple JavaScript
-  frameworks and bundlers, it is discovered that
-  performance optimisations can be made without sacraficing user or developer experience. This was
-  found using the Google Development Tools to analyse an app built with React, Node.js,
-  Socket.io and Express.js.
+  low-powered smartphones. The research focuses on front-end optimisations,
+  in particular bundlers, and JavaScript user interface frameworks. 
+  By analysing a testbed realtime chatting applications, built with
+  different frameworks, socket.io and Node.js, it is discovered that
+  performance optimisations can be made without sacraficing user or developer 
+  experience. This was found using the Google Development Tools to analyse 
 \end{abstract}
 \renewcommand{\abstractname}{Acknowledgements}
 \begin{abstract}
-A special thanks to Dan Prince for his unwavering encouragement and support in this
-project.
+A special thanks to Dr Norlaily Yaacob for supervision during this
+project - and to Dan Prince for his unwavering encouragement and support.
 \end{abstract}
 \pagebreak
 \tableofcontents

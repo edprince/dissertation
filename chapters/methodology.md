@@ -4,12 +4,12 @@
 
 ## Introduction
 
-In order to perform in-depth analysis on the largest areas for optimisation, a web app would need to be 
-studied in depth to gain insights. Rather than study an existing application, over which no control would 
+In order to perform detailed analysis on potential areas for optimisation, a web app would need to be 
+studied and modified to gain insights. Rather than study an existing application, over which no control would 
 be granted, a better solution would be to create a testbed application using modern technologies. In 
-tandem with this, Devtools provides accurate and reliable data on browser applications, with the ability 
+tandem with this, DevTools provides accurate and reliable analysis on browser applications, with the ability 
 to throttle the CPU to judge performance on simulated lower-hardware. This would allow comparisons to be 
-drawn across the different CPU throttle amounts, but with no other parameter changes.
+drawn across the different CPU throttle thresholds, but with no other parameter changes.
 
 To understand the decision for the case study subjects, first there must be a basic grasp on the history
 and current usage of JavaScript and ECMAScript. 
@@ -44,11 +44,6 @@ it would be feasible to run - adding credibility to the results collected.
 
 ## Testbed Application
 
-In order to comprehensively test the technologies being analysed,
-a testbed application was required. For the purposes of this project,
-realtime chatting application was created - an application with 
-genuine use.
-
 ### System Requirements
 The testbed application had to be:
 
@@ -58,30 +53,38 @@ The testbed application had to be:
  * Simulate heavy workload
  * Functional
 
- Initially, the application was built with React, and later re-written
- several times using different front-end frameworks. Using bundlers
- meant it could be written in ES2015, but compiled to ES5 to run on older
- browsers. The app utilises Socket.io to communicate with a Node.js 
- server also running Socket.io. On top of this, the appmakes use of 
- several other libraries, such as Bootstrap, Moment, JQuery and Faker, 
- giving a partially realistic build to the application. To simulate
- heavy workload, a factorial function was created, and called upon
- initialisation with an input of 1000. This gave the application a
- significant amount of work to do.
+In order to comprehensively test the technologies being analysed,
+a testbed application was required. For the purposes of this project,
+realtime chatting application was created - an application with 
+genuine purpose and functionality - requirements of the application.
+
+Initially, the application was built with React, and later re-written
+several times using different front-end frameworks. Using bundlers
+meant it could be written in ES2015, but compiled to ES5 to run on older
+browsers - another system requirement. The app utilises Socket.io 
+to communicate with a Node.js 
+server also running Socket.io. On top of this, the app utilises
+several other libraries, such as Bootstrap, Moment, JQuery and Faker, 
+giving a partially realistic build to the application. To simulate
+heavy workload, a factorial function was created, and called upon
+initialisation with an input of 1000. This gave the application a
+significant amount of work to do.
 
 ## Case Study One: Effect of Bundlers on Performance
 
-Case study 1 analyses the performance differences between two popular bundlers - Webpack and Rollup. 
+Case study 1 analyses the performance comparison between two popular bundlers - Webpack and Rollup. 
 These bundlers are
-being tested using the testbed application to ensure consistency across all other parameters other
+being tested using the testbed application with each framework to ensure consistency across all other parameters other
 than the bundler itself. 
 
 
 
 ### Bundlers 
 
-To adhere to good programming conventions, developers tend to build applications out of many modules, but 
-this raises more issues. To import a JavaScript file in HTML, you use a tag like so:
+Adhering to modern programming conventions, developers tend to build 
+applications out of many modules, but 
+from a performance perspective - this has its own issues. 
+To import a JavaScript file in HTML, a tag is used like so:
 
 ```HTML
 <script src="/path/to/file.js"></script>
@@ -89,7 +92,7 @@ this raises more issues. To import a JavaScript file in HTML, you use a tag like
 etc.
 ```
 If the applications is made up of 200 different files, the browser has to separately send a request for 
-each file, taking a long time to fetch the resources before the user can interact
+each file individually - consuming valuable time and resources before the user can interact
 with the full application. This is where bundlers are used. The bundler can take all these files, and 
 bundle them into one JavaScript file - which the browser then requests:
 
@@ -97,7 +100,8 @@ bundle them into one JavaScript file - which the browser then requests:
 <script src="/path/to/bundle.js"></script>
 ```
 
-Now there is only one file request from the browser, and one file to parse, albeit much larger. Bundlers 
+This resolution leaves only one file request from the browser and does not
+sacrifice developing standards. Bundlers 
 can do much more than just this however - they can also use plugins like Babel to convert ES2015 to ES5, 
 making the application fully browser compatible, along with minification, setting up development servers 
 and more. This leaves us being able to write modular code, in ES2015+, and still run the optimised app 
@@ -105,7 +109,7 @@ on older browsers. For the purpose of this project, two of the major bundlers we
 Webpack and Rollup.
 
 #### Webpack
-Webpack is the bundler used by the tool 'create-react-app', popular amongst developers for quickly getting React Apps
+Webpack is the bundler used by the tool `create-react-app`, popular amongst developers for quickly getting React Apps
 set up. 
 Webpack turns each module into its own isolated function scope.
 
@@ -142,7 +146,7 @@ In each case, the bundler will:
  * Compile the JS into ES5
  * Set up a server and serve the project
 
- The configuration file for each bundler is in the Appendix.
+The configuration file for each bundler is in the Appendix.
 
 
 ## Case Study Two: Effect of Different JavaScript Frameworks on Performance
@@ -191,15 +195,27 @@ to state management. GZipped and compressed, the framework is around 1KB (Bucara
 
 ## Performance Profiling
 
-To collect accurate metrics about the performance of the chat web app, the Google Chrome Development Tools were used. 
+To collect accurate metrics about the performance of the testbed application, the DevTools were used. 
 These tools allow for performance profiling, detailed audits for progressive web apps, and information about load 
 times and page weight. Additionally, they have the capability for CPU throttling, which allows visualising the scale 
 of performance difference between unthrottled and throttled CPU with the same application.
 
 Initially, the unbundled version of the application was analysed, with an unthrottled CPU. This gives the initial 
-set of metrics that can be calculated against. These are: 
+set of metrics that can be measured. These are: 
 
-Then a x4 throttle on the CPU was selected, and the again, giving a new set of results. From here, it was possible to 
+ * Load time
+ * TTI
+ * Page Weight
+ * Loading
+ * Scripting
+ * Rendering
+ * Painting
+ * Other
+ * Idle
+
+(These are defined in the section \ref{terminology}
+
+Then a CPU throttling was activated, and the profiling re-run, giving a new set of results. From here, it was possible to 
 calculate the percentage increase from the unthrottled set to the throttled set.
 
 \begin{gather*}
@@ -230,7 +246,7 @@ the relevant academic papers found in Chapter 2. The code for this script is fou
 As described in Figure \ref{flow_chart}, each version of the testbed application (e.g React, Hyperapp etc.) would be
 used as the input - hosting the app locally. Then the Puppeteer script would be run, loading the app and running a performance
 profile. The output of the script would be written to a file (using JavaScript's `date()` function to create unique
-file names. Each file could then be loaded into the Devtools and the inbuilt parser would display a summary of key information.
+file names. Each file could then be loaded into the DevTools and the inbuilt parser would display a summary of key information.
 This data was then written to a spreadsheet for further analysis.
 
 Webpack supports all ES5-compliant browsers - and if developers 

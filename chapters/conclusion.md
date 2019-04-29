@@ -12,7 +12,11 @@ usage of modules (Lawson 2016). When comparing each of the bundlers over multipl
 it was seen that Rollup was in fact demonstrating its marginal benefits - utilising the
 shared function scope bundling tactic.
 
-As seen from the full comparison table, the optimal solution when developing
+As seen from Figure \ref{framework_chart}, the optimal solution when developing
 for users on lower-power smartphones is the combination of Hyperapp and Rollup.
 This combination sees the lowest overall score across multiple throttling
 thresholds. This validates the prediction made in section \ref{prediction}.
+
+To give more credibility to these results, the entire process should be recreated
+with a much larger testbed application and see if the results are consistent across
+both experiments.

@@ -2,19 +2,27 @@
 
 # Literature Review
 
-## Introduction
+## Introduction \ref{lit-intro}
 As of 2018, there were 3.7 billion mobile devices connecting to the internet (Stevens, 2018) 
-showing global usage and coverage, and there’s nothing to suggest 
-that the growth in mobile usage will do anything other than increase.
+showing global usage and coverage, and according to Poushter and the
+research undertaken by PewResearchCentre - in 12 developing countries that
+were surveyed in 2014 and 2015, there were "significant" increases in
+adult mobile phone users. This gives credibility to the claim that
+there is a likely upwards trend in smartphone users in the developing world.
 
-Given that we know 90% of users stop using an app due to poor performance, and 86% will uninstall 
+Where there are users, there is also likely to be dissatisfaction,
+and Google estimate that a 400ms delay can see a drop off of 0.44% (Brutlag 2009).
+It has also been found that 90% of users stop using an app due to poor performance, and 86% will uninstall 
 the app altogether (AppDynamics and University of London 2014), there is the possibility for 
 unoptimised web apps to lose huge numbers of potential users due to the app performance not meeting 
-our standard usability criteria.
+modern web application performance. This research reinforces the statement
+that poor performing applications negatively impacts the number of users - 
+making the topic of optimising applications to avoid this a valid and
+useful area for research.
 
 Nejati and Balasubramanian discuss the difficulty in isolating the effects of the mobile browser in 
 determining the root of poor performance (Nejati, Balasubramanian 2016). This project will differ 
-from that research by making use of the Google Chrome Dev Tools mobile simulator - taking many of 
+from that research by making use of the DevTools mobile simulator - taking many of 
 the factors out of consideration, allowing isolation on only changes to the CPU performance. They 
 also identify the issue of mobile browsers being much slower than desktop, as agreed with in other 
 research on mobile optimisations in the cloud era (Wang et al. 2013), a problem given the dramatic 

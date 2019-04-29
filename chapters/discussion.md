@@ -1,6 +1,6 @@
 \pagebreak
 
-# Discussion
+# Discussion and Future Research
 
 Whilst useful data has been recorded in this project, the data could be
 substantially backed up with more experiments. Critically, testing the

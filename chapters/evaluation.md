@@ -60,7 +60,7 @@ shows that regardless of the bundler used, Hyperapp has the best performance of 
 
 Whilst only seemingly negligible improvements are discovered when
 comparing these frameworks and bundlers, Google stated that a 400
-millisecond delay correlates to a 0.44% drop in search volume. With
-3.896 billions internet users worldwide in 2018 (Statista 2019),
-that 0.44% represents 17,142,400 users. This gives credibility to
+millisecond delay correlates to a 0.44% drop in search volume (Brutlag 2009). With
+3.896 billion internet users worldwide in 2018 (Statista 2019),
+that 0.44% represents 17.14 million users. This gives credibility to
 the marginal improvements found by using Hyperapp and Rollup.
