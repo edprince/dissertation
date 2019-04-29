@@ -5,7 +5,7 @@ a current smartphone versus the Apollo-mission-era computers,
 the iPhone 6 processor clock speed is 32,600 times faster than the
 Apollo-era processors (Puiu 2019). Whilst not quite the same scale
 of gulf - there exists a distinct difference between the quality
-of smartphone in popular usage across developing countries versus
+of smartphone in popular usage across developed countries versus
 smartphones in popular usage across developing countries (Hiscott 2016). Additionally,
 there is a distinct lack of research into optimising web applications
 for lower power smartphones - contextualising the importance of
