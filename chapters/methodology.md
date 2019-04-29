@@ -213,7 +213,7 @@ set of metrics that can be measured. These are:
  * Other
  * Idle
 
-(These are defined in the section \ref{terminology}
+(These are defined in the section \ref{terminology})
 
 Then a CPU throttling was activated, and the profiling re-run, giving a new set of results. From here, it was possible to 
 calculate the percentage increase from the unthrottled set to the throttled set.

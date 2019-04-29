@@ -34,11 +34,16 @@ subparagraph: yes
   By analysing a testbed realtime chatting applications, built with
   different frameworks, socket.io and Node.js, it is discovered that
   performance optimisations can be made without sacraficing user or developer 
-  experience. This was found using the Google Development Tools to analyse 
+  experience. This was found using the Google Development Tools to analyse the
+  testbed application being created with different frameworks, bundlers and running
+  at different simulated CPU speeds.
+\linebreak
+\linebreak
+  Keywords: Mobile, Optimisation, Web, JavaScript, Bundling, Framework
 \end{abstract}
 \renewcommand{\abstractname}{Acknowledgements}
 \begin{abstract}
-A special thanks to Dr Norlaily Yaacob for supervision during this
+A special thanks to Dr Norlaily Yaacob for supervision throughout this
 project - and to Dan Prince for his unwavering encouragement and support.
 \end{abstract}
 \pagebreak

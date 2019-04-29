@@ -1,18 +1,28 @@
 # Introduction  
-When developing for mobile phones, the devices to which web apps are optimised are the current standard
-of modern mobile phones. Whilst this proves useful for a target audience of users able to buy this
-standard of device - it is less so for the many people who are unable to access web apps
-on new smarthones. Much of the developing world uses mobile phones several generations behind
-what is in popular usage across developed countries. With Google, Mozilla, Microsoft and Huawei all
-releasing cheap smartphones for developing countries (Hiscott 2016), it is likely the developing world's
+Developers take advantage of the outstanding capabilities
+present in modern smartphones. With a popular comparison being
+a current smartphone versus the Apollo-mission-era computers,
+the iPhone 6 processor clock speed is 32,600 times faster than the
+Apollo-era processors (Puiu 2019). Whilst not quite the same scale
+of gulf - there exists a distinct difference between the quality
+of smartphone in popular usage across developing countries versus
+smartphones in popular usage across developing countries (Hiscott 2016). Additionally,
+there is a distinct lack of research into optimising web applications
+for lower power smartphones - contextualising the importance of
+this subject topic.
+
+With Google, Mozilla, Microsoft and Huawei all
+releasing cheap smartphones for developing countries, it is likely the developing world's
 mobile device population will follow a trend of being considerably less powerful than the mobile device
 population of developed 
 countries (Hiscott 2016). With over 98% mobile phone adoption in developing countries (Sharwood, 2017)
 this offers a large market of potential users for web applications.
 
-With the anticipation of a high speed network and low-power CPU future (more detail in chapter 2),
-there is a strong possibility that developers will want to develop for lower-powered CPU's. To simulate
-these devices, this research will include analysis of performance changes when the CPU power is being throttled.
+A future high speed networks and lower-powered CPU's (more detail in chapter 2),
+there is a strong possibility that a trend of developing for lower-powered CPU's 
+may form. In anticipation of such a trend, this research is focused around
+performing an analysis of two major components to modern web applications:
+bundlers and JavaScript user interface frameworks. 
 
 Older devices also means a lack of compatibility with the newest browsers, meaning that for global
 usage, developers must make their applications work on older versions of browsers. To mitigate a

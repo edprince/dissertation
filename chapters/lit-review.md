@@ -2,7 +2,7 @@
 
 # Literature Review
 
-## Introduction \ref{lit-intro}
+## Introduction
 As of 2018, there were 3.7 billion mobile devices connecting to the internet (Stevens, 2018) 
 showing global usage and coverage, and according to Poushter and the
 research undertaken by PewResearchCentre - in 12 developing countries that

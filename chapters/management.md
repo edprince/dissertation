@@ -89,6 +89,6 @@ on the popular lower-powered devices, evidence shows that more
 people would adopt devices. Alongside this, it has been shown that
 mobile phone adoption has a huge effect on economies. According to
 Dahir, in 2015 mobile services generated 6.7% of Africa's GDP, around
-$150 billion in economic value. With the findings mentioned in section \ref{lit-intro},
+$150 billion in economic value. With the findings mentioned in the Literature Review - 
 faster, more optimised applications are more likely to retain users
 than applications that are slow (AppDynamics and University of London 2014).
