@@ -3,13 +3,15 @@
 # Evaluation and Results
 
 To find an overall score for each combination, the 20 results collected
-were averaged to create a sinlge score, before the average at each throttle
+were averaged to create a single score, before the average at each throttle
 threshold were accumulated to give a final overall score. This represents the
 overall time the CPU is processing. These final scores can then be compared
-to the other combinations.
+to the other combinations. A sample of the data is available in Appendix D, with
+the full data available in a Google Sheet (https://docs.google.com/spreadsheets/d/15fo0SEJk1VD0dxm5M7m6U4i8I6WDEQw-V5PXe4QvuEM/edit?usp=sharing).
 
 ## Case Study 1: Bundlers
 
+![Unbundled Chart](./images/unbundled_chart.png)
 
 ### Results of Webpack Bundling
 
@@ -34,6 +36,13 @@ Table: Rollup Results (cumulative ms) \label{rollup_results}
 | 6x | 17711.29 | 17624.91 | 17694.07 | 17560.245 |
 | Total | 32899.72 | 32760.7 | 32723.23 | 32517.345 |
 
+![Rollup Chart](./images/rollup_chart.png)
+
+It is evident from profiling the application that has been bundled with
+Rollup has significantly reduced scripting times.
+
+
+
 ![Webpack vs Rollup \label{webpack_vs_rollup}](./images/webpack_vs_rollup.png)
 
 Figure \ref{webpack_vs_rollup} demonstrates that Rollup performs better than Webpack consistently
@@ -47,3 +56,12 @@ the axes have been swapped, and the range has been appropriately shifted and sca
 shows that regardless of the bundler used, Hyperapp has the best performance of all four frameworks.
 
 ![Frameworks \label{framework_chart}](./images/framework_chart.png)
+
+## Summary
+
+Whilst only seemingly negligible improvements are discovered when
+comparing these frameworks and bundlers, Google stated that a 400
+millisecond delay correlates to a 0.44% drop in search volume (Brutlag 2009). With
+3.896 billion internet users worldwide in 2018 (Statista 2019),
+that 0.44% represents 17.14 million users. This gives credibility to
+the marginal improvements found by using Hyperapp and Rollup.
