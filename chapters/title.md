@@ -6,6 +6,7 @@ header-includes: |
   \affil{6151713}
   \affil{Supervised by Dr Norlaily Yaacob}
   \affil{Computer Science, Department of Computing}
+  \affil{Coventry University}
   \lstset{
     basicstyle=\ttfamily,
     breaklines=true,
